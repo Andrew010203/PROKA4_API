@@ -1,0 +1,28 @@
+services:
+  proka4_api:
+    image: api:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TOKEN=${TOKEN}
+      - CHAT_ID=${CHAT_ID}
+      - GITHUB_ACTIONS=${GITHUB_ACTIONS}
+      - GITHUB_REPOSITORY=${GITHUB_REPOSITORY}
+      - GITHUB_RUN_ID=${GITHUB_RUN_ID}
+    volumes:
+
+      - ./:/usr/workspace
+    command: /bin/sh -c "python -m pytest -sv -o log_cli=true --alluredir=report --ignore=gh-pages-dir"
+
+    shm_size: 2gb
+    tty: true
+
+
+  report:
+    image: api:v1
+    build: .
+    volumes:
+      - ./:/usr/workspace
+    command: /bin/sh -c "allure --version && allure generate report --clean -o allure-report"
+    working_dir: /usr/workspace
