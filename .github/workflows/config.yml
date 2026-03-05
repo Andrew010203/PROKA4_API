@@ -24,7 +24,7 @@ jobs:
         run: |
           docker compose run --rm \
             -e PYTEST_ADDOPTS="--color=yes" \
-            -e TOKEN="${{ secrets.TOKEN }}" \
+            -e BEARER_TOKEN="${{ secrets.TOKEN }}" \
             -e CHAT_ID="${{ secrets.CHAT_ID }}" \
             -e GITHUB_ACTIONS="true" \
             -e GITHUB_REPOSITORY="${{ github.repository }}" \
