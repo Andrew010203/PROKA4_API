@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Mar 05 15:11:10 GMT 2026","Thu Mar 05 15:11:11 GMT 2026","497","tests","test_session_management","TestSessionManagement","","","session_info",""
+"passed","Fri Mar 06 06:35:49 GMT 2026","Fri Mar 06 06:35:49 GMT 2026","351","tests","test_session_management","TestSessionManagement","","","session_info",""
