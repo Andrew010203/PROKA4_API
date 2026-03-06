@@ -21,11 +21,11 @@ def pytest_terminal_summary(terminalreporter):
    if is_github_actions:
        repo_name = os.getenv("GITHUB_REPOSITORY")
        # Переводим в нижний регистр, чтобы ссылка не билась
-       full_name = repo_name.lower()
+       full_name = repo_name
        user, repo = full_name.split("/")
 
        # Пока твой деплой не настроен на подпапки, используем корень:
-       GITHUB_PAGE_URL = f"https://{user}.github.io/{repo}/"
+       GITHUB_PAGE_URL = f"https://{user.lower()}.github.io/{repo}/"
    else:
        # Локально
        GITHUB_PAGE_URL = "https://andrew010203.github.io"
