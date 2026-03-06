@@ -6,6 +6,7 @@ HOST = "https://aqa-proka4.org/sandbox"
 class Endpoints:
 
     session_info = f"{HOST}/api/session"
+    reset_sandbox = f"{HOST}/api/reset"
 
 
 
