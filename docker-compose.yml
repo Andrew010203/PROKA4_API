@@ -7,6 +7,7 @@ services:
     environment:
       - TOKEN=${TOKEN}
       - CHAT_ID=${CHAT_ID}
+      - BEARER_TOKEN=${BEARER_TOKEN}
       - GITHUB_ACTIONS=${GITHUB_ACTIONS}
       - GITHUB_REPOSITORY=${GITHUB_REPOSITORY}
       - GITHUB_RUN_ID=${GITHUB_RUN_ID}
