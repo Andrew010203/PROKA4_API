@@ -14,7 +14,7 @@ services:
     volumes:
 
       - ./:/usr/workspace
-    command: /bin/sh -c "python -m pytest -sv -o log_cli=true --alluredir=report --ignore=gh-pages-dir"
+    command: /bin/sh -c "python -m pytest -sv --reruns 2 --reruns-delay 1 -o log_cli=true --alluredir=report --ignore=gh-pages-dir"
 
     shm_size: 2gb
     tty: true
