@@ -1,3 +1,4 @@
+from services.products.products_api import ProductsApi
 from services.session_management.payloads import Payloads
 from services.session_management.session_management_api import SessionManagementApi
 
@@ -5,8 +6,9 @@ from services.session_management.session_management_api import SessionManagement
 class BaseTest:
 
     def setup_method(self):
-        self.session_management_api = SessionManagementApi()
         self.payloads = Payloads()
+        self.session_management_api = SessionManagementApi()
+        self.products_api = ProductsApi()
 
 
         # self.store_api = StoreApi()
