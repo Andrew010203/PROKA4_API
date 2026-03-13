@@ -1,0 +1,5 @@
+{
+    "error": "Authorization required",
+    "example": "Authorization: Bearer sandbox_xxx...",
+    "message": "Use Bearer token in Authorization header or access via web interface"
+}
