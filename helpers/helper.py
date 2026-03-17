@@ -11,6 +11,31 @@ class Helper:
     #         name="API Response",
     #         attachment_type=allure.attachment_type.JSON
     #     )
+
+    # def validate_response(self,
+    #                       response: requests.Response,
+    #                       model: type[BaseModel] = None,
+    #                       status_code: int = 200):
+    #
+    #     # 1. Сначала логируем (текст или JSON — метод attach_response сам разберется)
+    #     self.attach_response(response)
+    #
+    #     # 2. Проверяем статус-код первым делом
+    #     assert response.status_code == status_code, \
+    #         f"Expected {status_code}, but got {response.status_code}. Response: {response.text[:200]}"
+    #
+    #     # 3. Если модель не передана (например, для 204 No Content или 404), просто выходим
+    #     if model is None:
+    #         return None
+    #
+    #     # 4. Валидируем JSON (только если статус успешный)
+    #     data = response.json()
+    #     if isinstance(data, list):
+    #         # Универсальный способ для списков объектов
+    #         return TypeAdapter(list[model]).validate_python(data)
+    #     return model(**data)
+
+
     def attach_response(self, response):
         """
         Универсальный метод для прикрепления ответа к Allure-отчету.
