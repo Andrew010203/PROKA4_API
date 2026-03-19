@@ -1,0 +1,5 @@
+{
+    "available": 50,
+    "error": "Insufficient stock",
+    "requested": 99999
+}
