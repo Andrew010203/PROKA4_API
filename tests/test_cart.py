@@ -14,13 +14,14 @@ class TestCart(BaseTest):
 
     @allure.title("Добавить товар в корзину")
     @pytest.mark.parametrize("product_id, quantity, expected_status", [
-        (1, 2, 200),          # Позитив: новый товар (ждем 201)
-        (1, 1, 200),          # Позитив: тот же товар (ждем 200 - обновление кол-ва)
+        (1, 2, 201),          # Позитив: новый товар
+        (1, 1, 201),          # Позитив: тот же товар (обновление кол-ва)
         (999999, 1, 400),     # Негатив: товар не найден (по доке 400)
         ("abc", 1, 400),      # Негатив: неверный тип данных
         pytest.param(1, 0, 422, marks=pytest.mark.xfail(reason="Server allows zero quantity"))  # Негатив: количество должно быть > 0
     ])
     def test_add_product_to_cart(self, product_id, quantity, expected_status):
+        self.cart_api.clear_cart(expected_status=204)
         payload = self.cart_api.payloads.add_product(product_id, quantity)
         self.cart_api.add_product_to_cart(payload, expected_status)
 

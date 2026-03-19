@@ -30,7 +30,7 @@ class CartApi(Helper):
                                  json=payload)
         self.attach_response(response)
         assert response.status_code == expected_status, f"Expected {expected_status}, but got {response.status_code}"
-        if response.status_code in [200, 201]:
+        if response.status_code == 200 or response.status_code == 201:
             return self.validate_response(response, AddProductResponse, status_code=expected_status)
         try:
             return response.json()
@@ -40,7 +40,7 @@ class CartApi(Helper):
 
     @allure.step("Обновить количество товара в корзине (PUT /api/cart/items/{id})")
     def update_quantity_products_in_cart(self, id: int, payload: dict, expected_status: int) -> AddProductResponse | dict | str:
-        response = requests.put(url=self.endpoints.my_cart(id),
+        response = requests.put(url=self.endpoints.cart_with_id(id),
                                 headers=self.headers.base,
                                 json=payload)
         self.attach_response(response)
