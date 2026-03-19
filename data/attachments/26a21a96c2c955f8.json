@@ -1,0 +1,12 @@
+{
+    "bearer_token": "sandbox_51ea48e89b14c45bfbf552fb00bd2124a3ac5cb52e094a517378716f76113713",
+    "is_authenticated": true,
+    "limits": {
+        "max_resource_size": 10240,
+        "max_resources_per_type": 100,
+        "ttl": "permanent"
+    },
+    "session_id": "N/A",
+    "storage": "postgresql",
+    "user_id": 74
+}
