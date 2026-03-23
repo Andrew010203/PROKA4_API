@@ -30,13 +30,13 @@ class OrdersApi(Helper):
             return response.text
 
 
-    @allure.step("Получить список всех заказов (сортировка: новые первые) (GET /api/orders)") # TODO вернуться позже, доработать
+    @allure.step("Получить список всех заказов (сортировка: новые первые) (GET /api/orders)")
     def get_orders(self) -> OrderResponse:
         response = requests.get(url=self.endpoints.get_orders,
                                 headers=self.headers.base)
         self.attach_response(response)
-        print(response.text) # json не приходит, просто если response-статус код 200, а text- пустой список[], баг?
-        return self.validate_response(response, OrderResponse, status_code=200) # валидация при этом отрабатывает
+        print(response.text)
+        return self.validate_response(response, OrderResponse, status_code=200)
 
 
     @allure.step("Получить детали заказа по ID (GET /api/orders/{id})")
