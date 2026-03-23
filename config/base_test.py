@@ -1,4 +1,5 @@
 from services.categories.categories_api import CategoriesApi
+from services.orders.orders_api import OrdersApi
 from services.products.products_api import ProductsApi
 from services.cart.cart_api import CartApi
 from services.cart.payloads import Payloads
@@ -14,5 +15,6 @@ class BaseTest:
         self.products_api = ProductsApi()
         self.categories_api = CategoriesApi()
         self.cart_api = CartApi()
+        self.orders_api = OrdersApi()
 
 
