@@ -1,0 +1,7 @@
+{
+    "error": "Missing required fields",
+    "missing_fields": [
+        "price",
+        "category"
+    ]
+}
