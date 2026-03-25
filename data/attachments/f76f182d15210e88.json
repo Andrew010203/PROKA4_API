@@ -1,0 +1,17 @@
+{
+    "created_at": "2026-03-25T12:51:16.979065Z",
+    "id": 3,
+    "items": [
+        {
+            "created_at": "2026-03-25T12:51:16.743708Z",
+            "id": 1,
+            "price": 29.99,
+            "product_id": 1,
+            "product_name": "Wireless Mouse",
+            "quantity": 1,
+            "total": 29.99
+        }
+    ],
+    "status": "pending",
+    "total": 29.99
+}

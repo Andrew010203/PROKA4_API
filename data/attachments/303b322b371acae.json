@@ -1,0 +1,11 @@
+{
+    "category": "Electronics",
+    "description": "Ergonomic wireless mouse with USB receiver",
+    "id": 1,
+    "image_url": "https://via.placeholder.com/300x300?text=Mouse",
+    "name": "Wireless Mouse",
+    "price": 29.99,
+    "rating": 4.5,
+    "reviews_count": 23,
+    "stock": 50
+}

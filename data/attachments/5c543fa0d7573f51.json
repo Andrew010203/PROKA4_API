@@ -1,0 +1,13 @@
+{
+    "category": "Buchanan Group",
+    "created_at": "2026-03-25T12:51:24.029656Z",
+    "description": "jackson-baird",
+    "id": 9,
+    "image_url": "ifisher@example.com",
+    "name": "",
+    "price": 8562,
+    "rating": 3.2788636178634123,
+    "reviews_count": 27,
+    "stock": 26,
+    "updated_at": "2026-03-25T12:51:24.235788Z"
+}
