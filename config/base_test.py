@@ -5,7 +5,7 @@ from services.cart.cart_api import CartApi
 from services.cart.payloads import Payloads
 from services.session_management.payloads import Payloads
 from services.session_management.session_management_api import SessionManagementApi
-
+from services.reviews.reviews_api import ReviewsApi
 
 class BaseTest:
 
@@ -16,5 +16,6 @@ class BaseTest:
         self.categories_api = CategoriesApi()
         self.cart_api = CartApi()
         self.orders_api = OrdersApi()
+        self.reviews_api = ReviewsApi()
 
 
