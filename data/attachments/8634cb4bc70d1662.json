@@ -1,0 +1,22 @@
+[
+    {
+        "description": "Electronic devices and gadgets",
+        "id": 1,
+        "name": "Electronics"
+    },
+    {
+        "description": "Computer accessories",
+        "id": 2,
+        "name": "Accessories"
+    },
+    {
+        "description": "Gaming peripherals",
+        "id": 3,
+        "name": "Gaming"
+    },
+    {
+        "description": "Office supplies",
+        "id": 4,
+        "name": "Office"
+    }
+]
